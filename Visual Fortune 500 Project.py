@@ -2,6 +2,8 @@
 # lets a user enter a year and displays a graph of the Revenue for each of the top 15 Fortune 500 companies for that year.
 # Import modules #
 
+# Import modules #
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -19,6 +21,7 @@ def getDataByYear(df,year):
 def drawGraph(df,title):
   df.plot.bar(x="Company", y="Revenue (in millions)", color='red')
   plt.title(f"Top 15 Companies in {userYear}")
+  plt.ylabel("Revenue (in millions)")
   plt.show()  
 
 # main program #
